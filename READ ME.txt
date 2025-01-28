@@ -1,0 +1,41 @@
+READ ME
+Download Kaggle.json API into your local drive 
+Upload Kaggle.json when prompted during code execution [Cell 116]
+
+
+
+├── datasets
+│   ├── train "--> Our train datasets, contains ripe and rotten apples and tomatoes"
+│   │   ├── ripeapples
+│   │   ├── ripetomatoes
+│   │   ├── rottenapples
+│   │   ├── rottentomatoes
+│   │   
+│   └── test "--> Our test datasets, contains  ripe and rotten apples and tomatoes"
+│   │   ├── ripeapples
+│   │   ├── ripetomatoes
+│   │   ├── rottenapples
+│   │   ├── rottentomatoes
+
+************************************************************************
+To upload random images of apples and tomatoes,
+Remove the triple quotes  (apostrophes ) from Cell 133 and run the CELL 
+---------------------------------------------------------------------------------
+'''from keras.utils import get_file
+import pathlib
+import cv2
+from google.colab import files
+model_predict = tf.keras.models.load_model('model.h5')
+model_predict.compile(optimizer='adam',
+                      loss='binary_crossentropy',
+                      metrics=['accuracy'])
+
+uploaded = files.upload()
+image_name = []
+image_conf = []
+predict_result = []......
+
+#rest of code
+---------------------------------------------------------
+
+**************************************************************************
